@@ -2,15 +2,24 @@ package com.wbl.basic;
 
 /**
  * Created by Sampath on 8/19/2015.
+ * @see This is my first business class
+ * @version 1.0
+ * @author Sampath
  */
 public class Account {
 
-    private int accountNumber;
+    public int accountNumber;
     private double accountBalance;
     private String accountPrimaryAddress;
 
-    public Account()
-    {
+    //single line comment
+    /*
+    *multi
+    * line
+    * comment
+     */
+
+    public Account() {
         //db
         //conn
         //stnt//
@@ -18,10 +27,8 @@ public class Account {
         this.accountBalance = 25;
     }
 
-
     public String getAccountPrimaryAddress() {
-        if(accountPrimaryAddress == null)
-        {
+        if (accountPrimaryAddress == null) {
             return "No Address";
         }
         return accountPrimaryAddress;
@@ -31,8 +38,7 @@ public class Account {
         this.accountPrimaryAddress = accountPrimaryAddress;
     }
 
-    public double getAccountBalance()
-    {
+    public double getAccountBalance() {
         return accountBalance;
     }
 
@@ -43,7 +49,6 @@ public class Account {
     public void deposit(double amount) {
         accountBalance += amount;
     }
-
 
 
 }
