@@ -9,6 +9,7 @@ package com.wbl.basic;
 public class Account {
 
     public int accountNumber;
+    public AccountType accountType;
     private double accountBalance;
     private String accountPrimaryAddress;
 
@@ -39,7 +40,21 @@ public class Account {
     }
 
     public double getAccountBalance() {
-        return accountBalance;
+        double balance = 0;
+
+        switch (accountType) {
+            case SAVING:
+                balance = accountBalance + accountBalance * 0.00001;
+                break;
+            case CHECKING:
+                balance = accountBalance;
+                break;
+            default:
+                balance = accountBalance;
+                break;
+        }
+
+        return balance;
     }
 
     public void withdraw(double amount) {
