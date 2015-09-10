@@ -11,6 +11,11 @@ public class Manager extends Employee {
         return "Department: " + department;
     }
 
+    public String getDetails() {
+        return super.getDetails() + " ," + this.getDepartment();
+    }
     //is a relationship
     //subclassing
+
+
 }
